@@ -1,0 +1,7 @@
+D:\LammeSoft.HSM\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+D:\LammeSoft.HSM\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+D:\LammeSoft.HSM\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+D:\LammeSoft.HSM\ConsoleApplication1\bin\Debug\LammeSoft.HSMLib.dll
+D:\LammeSoft.HSM\ConsoleApplication1\bin\Debug\LammeSoft.HSMLib.pdb
+D:\LammeSoft.HSM\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.exe
+D:\LammeSoft.HSM\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.pdb

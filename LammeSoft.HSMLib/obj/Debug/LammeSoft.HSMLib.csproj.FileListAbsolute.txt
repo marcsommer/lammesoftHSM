@@ -1,0 +1,9 @@
+D:\_______________________PRIVATE ACCESS\LammeSoft.HSM\LammeSoft.HSMLib\bin\Debug\LammeSoft.HSMLib.dll
+D:\_______________________PRIVATE ACCESS\LammeSoft.HSM\LammeSoft.HSMLib\bin\Debug\LammeSoft.HSMLib.pdb
+D:\_______________________PRIVATE ACCESS\LammeSoft.HSM\LammeSoft.HSMLib\obj\Debug\ResolveAssemblyReference.cache
+D:\_______________________PRIVATE ACCESS\LammeSoft.HSM\LammeSoft.HSMLib\obj\Debug\LammeSoft.HSMLib.dll
+D:\_______________________PRIVATE ACCESS\LammeSoft.HSM\LammeSoft.HSMLib\obj\Debug\LammeSoft.HSMLib.pdb
+D:\LammeSoft.HSM\LammeSoft.HSMLib\bin\Debug\LammeSoft.HSMLib.dll
+D:\LammeSoft.HSM\LammeSoft.HSMLib\bin\Debug\LammeSoft.HSMLib.pdb
+D:\LammeSoft.HSM\LammeSoft.HSMLib\obj\Debug\LammeSoft.HSMLib.dll
+D:\LammeSoft.HSM\LammeSoft.HSMLib\obj\Debug\LammeSoft.HSMLib.pdb
