@@ -7,3 +7,8 @@ D:\LammeSoft.HSM\ConsoleApplication1\obj\x86\Debug\LammeSoft.HSMSamples.exe
 D:\LammeSoft.HSM\ConsoleApplication1\obj\x86\Debug\LammeSoft.HSMSamples.pdb
 D:\lammesoftHSM\ConsoleApplication1\obj\x86\Debug\LammeSoft.HSMSamples.exe
 D:\lammesoftHSM\ConsoleApplication1\obj\x86\Debug\LammeSoft.HSMSamples.pdb
+D:\lammesoftHSM\ConsoleApplication1\bin\Debug\LammeSoft.HSMSamples.exe
+D:\lammesoftHSM\ConsoleApplication1\bin\Debug\LammeSoft.HSMSamples.pdb
+D:\lammesoftHSM\ConsoleApplication1\bin\Debug\LammeSoft.HSMLib.dll
+D:\lammesoftHSM\ConsoleApplication1\bin\Debug\LammeSoft.HSMLib.pdb
+D:\lammesoftHSM\ConsoleApplication1\obj\x86\Debug\LammeSoft.HSMSamples.csprojResolveAssemblyReference.cache

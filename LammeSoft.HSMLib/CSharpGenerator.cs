@@ -263,7 +263,102 @@ namespace LammeSoft.HSMLib
             return b.ToString();
         }
 
-                                  
+        public Machine<T> GenerateCodeDynamic<T>()
+        {
+
+            BuildPseudo(_trs);
+
+
+            Machine<T> ma = new Machine<T>();
+
+
+            StringBuilder _builder = new StringBuilder();
+            //ctor
+            //_builder.AppendLine("public " + ClassName + "()");
+            _builder.AppendLine("{");
+            _builder.AppendLine(Init(null, Startup, null));
+            _builder.AppendLine(CustomCtor);
+            _builder.AppendLine("}");
+
+
+            List<Transition> transitions = level1.Transitions.ToList();
+            var methodes = transitions.Select(p => p.Method).Distinct();
+            foreach (var m in methodes)
+            {
+                _builder.AppendLine("public void " + m.Name + "(" + string.Join(",", m.Parameters.Select(o => o.Type + " " + o.Name)) + ")");
+                _builder.AppendLine("{"); // start methode
+
+
+                ClassSwitch<T> sw = new ClassSwitch<T>();
+                ma.Add("m" + m.GetHashCode(), sw);
+
+
+
+                var mtrs = transitions.Where(p => p.Method.Equals(m));
+                var froms = mtrs.Select(p => p.From).Distinct();
+
+                _builder.AppendLine("switch( " + StateIdMemberName + ") {");
+                foreach (var fr in froms)
+                {
+                    var mtos = mtrs.Where(p => p.From.Equals(fr));
+                    var mtos2 = new List<Transition>();
+                    mtos2.AddRange(mtos.Where(p => !string.IsNullOrWhiteSpace(p.Condition)).OrderBy(p => p.Index)); // cas avec condition
+                    var sansConditions = mtos.Where(p => string.IsNullOrWhiteSpace(p.Condition));
+                    if (sansConditions.Count() > 1)
+                        throw new Exception("Multiples destinations pour sans condition ! : Pas resolvable");
+                    mtos2.AddRange(sansConditions); // cas sans condition <=1 !!!!!
+
+                    _builder.AppendLine("case " + fr.UniqueId + " : ");
+
+                    sw.Add(fr.UniqueId, null);
+
+                    #region Block
+                    int pass = 0;
+                    foreach (var p in mtos2)
+                    {
+                        if (pass > 0)
+                            _builder.AppendLine("else");
+                        if (p.Condition != null)
+                        {
+                            _builder.AppendLine("if ( " + p.Condition + ")");
+                            _builder.AppendLine("{");
+                            _builder.AppendLine(Init(p.From, p.To, p.Action));
+                            _builder.AppendLine("}");
+                        }
+                        else
+                        {
+                            _builder.AppendLine("{");
+                            _builder.AppendLine(Init(p.From, p.To, p.Action));
+                            _builder.AppendLine("}");
+                        }
+                        pass++;
+                    }
+                    #endregion
+                    _builder.AppendLine("break; ");
+
+                }
+                _builder.AppendLine("}"); // end switch
+
+
+
+
+
+
+                _builder.AppendLine("}"); // end method
+            }
+
+
+            _builder.AppendLine(CustomCode);
+
+            _builder.AppendLine("}"); // end class
+            _builder.AppendLine("}"); // end namespace
+
+            //Console.WriteLine(_builder.ToString());
+            //File.WriteAllText(System.IO.Path.Combine(Path, ClassName + ".cs"), _builder.ToString());
+
+            return ma;
+        }
+           
         public  void GenerateCode()
         {
 

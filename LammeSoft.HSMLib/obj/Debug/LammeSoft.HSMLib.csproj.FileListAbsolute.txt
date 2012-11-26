@@ -7,3 +7,7 @@ D:\LammeSoft.HSM\LammeSoft.HSMLib\bin\Debug\LammeSoft.HSMLib.dll
 D:\LammeSoft.HSM\LammeSoft.HSMLib\bin\Debug\LammeSoft.HSMLib.pdb
 D:\LammeSoft.HSM\LammeSoft.HSMLib\obj\Debug\LammeSoft.HSMLib.dll
 D:\LammeSoft.HSM\LammeSoft.HSMLib\obj\Debug\LammeSoft.HSMLib.pdb
+D:\lammesoftHSM\LammeSoft.HSMLib\bin\Debug\LammeSoft.HSMLib.dll
+D:\lammesoftHSM\LammeSoft.HSMLib\bin\Debug\LammeSoft.HSMLib.pdb
+D:\lammesoftHSM\LammeSoft.HSMLib\obj\Debug\LammeSoft.HSMLib.dll
+D:\lammesoftHSM\LammeSoft.HSMLib\obj\Debug\LammeSoft.HSMLib.pdb
